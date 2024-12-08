@@ -1,0 +1,65 @@
+<h2 mat-dialog-title>Add Pharmacy Product</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="productForm" (ngSubmit)="onFormSubmit()">
+    <!-- Product Name -->
+    <mat-form-field appearance="fill" class="w-100">
+      <mat-label>Product Name</mat-label>
+      <input matInput formControlName="productName" placeholder="Enter product name" />
+      <mat-error *ngIf="productForm.get('productName')?.invalid">
+        Product name is required.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Category -->
+    <mat-form-field appearance="fill" class="w-100">
+      <mat-label>Category</mat-label>
+      <mat-select formControlName="category">
+        <mat-option value="medication">Medication</mat-option>
+        <mat-option value="supplement">Supplement</mat-option>
+        <mat-option value="equipment">Medical Equipment</mat-option>
+      </mat-select>
+      <mat-error *ngIf="productForm.get('category')?.invalid">
+        Category is required.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Price -->
+    <mat-form-field appearance="fill" class="w-100">
+      <mat-label>Price</mat-label>
+      <input matInput type="number" formControlName="price" placeholder="Enter price" />
+      <mat-error *ngIf="productForm.get('price')?.invalid">
+        Price is required and must be a positive number.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Quantity -->
+    <mat-form-field appearance="fill" class="w-100">
+      <mat-label>Quantity</mat-label>
+      <input matInput type="number" formControlName="quantity" placeholder="Enter quantity" />
+      <mat-error *ngIf="productForm.get('quantity')?.invalid">
+        Quantity is required and must be a positive number.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Expiry Date -->
+    <mat-form-field appearance="fill" class="w-100">
+      <mat-label>Expiry Date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="expiryDate" placeholder="Choose expiry date" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="productForm.get('expiryDate')?.invalid">
+        Expiry date is required.
+      </mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" [disabled]="productForm.invalid" (click)="onSubmit()">
+    Save
+  </button>
+  <button mat-button mat-dialog-close>
+    Cancel
+  </button>
+</mat-dialog-actions>
