@@ -52,14 +52,17 @@
         Expiry date is required.
       </mat-error>
     </mat-form-field>
-  </form>
-</mat-dialog-content>
 
-<mat-dialog-actions align="end">
-  <button mat-raised-button color="primary" [disabled]="productForm.invalid" (click)="onSubmit()">
-    Save
+    <mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" [disabled]="productForm.invalid" type="submit">
+    {{data ? 'update': 'save'}}
   </button>
-  <button mat-button mat-dialog-close>
+  <button mat-button type="button" [mat-dialog-close]="false">
     Cancel
   </button>
 </mat-dialog-actions>
+
+  </form>
+</mat-dialog-content>
+
+

@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "productName": "Paracetamol",
+      "category": "Medication",
+      "price": 2.99,
+      "quantity": 100,
+      "expiryDate": "2025-12-31"
+    },
+    {
+      "id": "2",
+      "productName": "Vitamin C",
+      "category": "Supplement",
+      "price": 5.49,
+      "quantity": 200,
+      "expiryDate": "2024-07-15"
+    },
+    {
+      "productName": "Face Mask",
+      "category": "supplement",
+      "price": 1.5,
+      "quantity": 500,
+      "expiryDate": "2030-01-01",
+      "id": "3"
+    },
+    {
+      "productName": "Ibuprofen",
+      "category": "supplement",
+      "price": 3.75,
+      "quantity": 154,
+      "expiryDate": "2026-05-20",
+      "id": "4"
+    }
+  ]
+}

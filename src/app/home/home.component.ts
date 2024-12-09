@@ -8,11 +8,6 @@ import { ProduitAddEditComponent } from '../produit-add-edit/produit-add-edit.co
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  readonly dialog = inject(MatDialog);
 
-  constructor(private _dialog: MatDialog){}
-
-  openAddEditPropForm() {
-    this.dialog.open(ProduitAddEditComponent);
-  }
+  
 }
