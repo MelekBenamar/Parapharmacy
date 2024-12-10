@@ -26,6 +26,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { ProductListComponent } from './product-list/product-list.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ProductGridComponent } from './fragments/product-grid/product-grid.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ProductGridComponent } from './fragments/product-grid/product-grid.comp
     HomeComponent,
     ProduitAddEditComponent,
     ProductListComponent,
-    ProductGridComponent
+    ProductGridComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
