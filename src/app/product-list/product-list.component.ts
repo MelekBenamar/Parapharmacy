@@ -5,6 +5,7 @@ import { ProductService } from '../services/product.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { CoreService } from '../core/core.service';
 
 @Component({
   selector: 'app-product-list',
@@ -26,7 +27,11 @@ export class ProductListComponent implements OnInit{
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private _dialog: MatDialog, private _productService: ProductService){}
+  constructor(
+    private _dialog: MatDialog, 
+    private _productService: ProductService,
+    private _coreService: CoreService
+  ){}
 
   ngOnInit(): void {
       this.getProductList();
@@ -62,7 +67,7 @@ export class ProductListComponent implements OnInit{
   deleteProduct(id: number){
     this._productService.deleteProduct(id).subscribe({
       next: (res) => {
-        alert('Product deleted !')
+        this._coreService.openSnackBar('Product deleted !','Ok')
         this.getProductList();
       },
       error: console.log,

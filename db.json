@@ -1,12 +1,12 @@
 {
   "products": [
     {
-      "id": "1",
       "productName": "Paracetamol",
       "category": "Medication",
-      "price": 2.99,
+      "price": 3.99,
       "quantity": 100,
-      "expiryDate": "2025-12-31"
+      "expiryDate": "2025-12-31",
+      "id": "1"
     },
     {
       "id": "2",
@@ -25,12 +25,12 @@
       "id": "3"
     },
     {
-      "productName": "Ibuprofen",
+      "productName": "khelid",
       "category": "supplement",
-      "price": 3.75,
-      "quantity": 154,
-      "expiryDate": "2026-05-20",
-      "id": "4"
+      "price": 1555,
+      "quantity": 2,
+      "expiryDate": "2025-08-24T23:00:00.000Z",
+      "id": "7016"
     }
   ]
 }

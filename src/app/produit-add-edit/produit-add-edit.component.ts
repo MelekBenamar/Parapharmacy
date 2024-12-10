@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProductService } from '../services/product.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { CoreService } from '../core/core.service';
 
 @Component({
   selector: 'app-produit-add-edit',
@@ -17,6 +18,7 @@ export class ProduitAddEditComponent implements OnInit{
     private fb: FormBuilder, 
     private _productService: ProductService,
     private _dialogRef: MatDialogRef<ProduitAddEditComponent>,
+    private _coreService: CoreService,
     @Inject(MAT_DIALOG_DATA) public data: any 
 
   ) {
@@ -37,7 +39,7 @@ export class ProduitAddEditComponent implements OnInit{
       if(this.data){
         this._productService.updateProdcut(this.data.id, this.productForm.value).subscribe({
           next: (val:any) => {
-            alert('Product Updated !');
+            this._coreService.openSnackBar('Product Updated !','done')
             this._dialogRef.close(true);
           },
           error: (error: any) => {
@@ -47,7 +49,7 @@ export class ProduitAddEditComponent implements OnInit{
       } else {
         this._productService.addProdcut(this.productForm.value).subscribe({
           next: (val:any) => {
-            alert('Product Added Successfully !');
+            this._coreService.openSnackBar('Product Added Successfully !','Ok')
             this._dialogRef.close(true);
           },
           error: (error: any) => {
