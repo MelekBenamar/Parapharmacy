@@ -23,14 +23,6 @@
       "quantity": 500,
       "expiryDate": "2030-01-01",
       "id": "3"
-    },
-    {
-      "productName": "khelid",
-      "category": "supplement",
-      "price": 1555,
-      "quantity": 2,
-      "expiryDate": "2025-08-24T23:00:00.000Z",
-      "id": "7016"
     }
   ]
 }

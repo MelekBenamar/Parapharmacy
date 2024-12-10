@@ -25,13 +25,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { ProductListComponent } from './product-list/product-list.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ProductGridComponent } from './fragments/product-grid/product-grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProduitAddEditComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductGridComponent
   ],
   imports: [
     BrowserModule,

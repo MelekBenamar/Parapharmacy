@@ -1,0 +1,19 @@
+<div class="container my-5">
+    <div class="row">
+      <div *ngFor="let product of products" class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img
+            [src]="'images/products/' + product.productName + '.jpg'"
+            [alt]="product.productName"
+            class="product-image" 
+            onerror="this.src='images/products/default.jpg';"
+          />
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ product.productName }}</h5>
+            <p class="card-text">${{ product.price.toFixed(2) }}</p>
+            <button class="btn cart-button">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>  

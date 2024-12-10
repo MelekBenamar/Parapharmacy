@@ -1,0 +1,26 @@
+
+.product-image {
+    width: 100%; /* Make the image take up full width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Optional: Limit maximum height */
+    object-fit: contain; /* Ensure the image fits without distortion */
+    border-radius: 8px; /* Optional: Add rounded corners */
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    color: #555;
+  }
+
+  .cart-button {
+    background-color: #92F504;
+  }
+
+  .cart-button:hover {
+    background-color: #559100; /* Darker shade on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+  }

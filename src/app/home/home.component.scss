@@ -2,6 +2,39 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+.navbar-logo {
+  max-height: 70px; /* Adjust this value to fit your navbar */
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.nav-custom {
+  font-size: 1.2rem; /* Slightly larger text */
+  padding: 0.5rem 1rem; /* Increase padding for a larger clickable area */
+  color: #92F504; /* Custom background color */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center;
+  display: inline-block; /* Ensures padding applies correctly */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-custom:hover {
+  background-color: #92F504; /* Darker shade on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
 
     padding-bottom: 3rem;
@@ -14,7 +47,7 @@ body {
   
   /* Carousel base class */
   .carousel {
-    margin-bottom: 4rem;
+    margin-bottom: 0rem;
   }
   /* Since positioning the image, we need to help out the caption */
   .carousel-caption {
@@ -28,20 +61,19 @@ body {
   }
   
   
-  /* MARKETING CONTENT
+  /* PRODUCT CONTENT
   -------------------------------------------------- */
   
-  /* Center align the text within the three columns below the carousel */
-  .marketing .col-lg-4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
+  .section-title {
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: #333; /* Customize color */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Optional: Make text uppercase */
+    border-bottom: 2px solid #007bff; /* Optional: Add a bottom border */
+    display: inline-block; /* Keeps the border tight to the text */
+    padding-bottom: 5px; /* Space between text and border */
   }
-  /* rtl:begin:ignore */
-  .marketing .col-lg-4 p {
-    margin-right: .75rem;
-    margin-left: .75rem;
-  }
-  /* rtl:end:ignore */
   
   
   /* Featurettes
@@ -50,11 +82,23 @@ body {
   .featurette-divider {
     margin: 5rem 0; /* Space out the Bootstrap <hr> more */
   }
+
+  .featurette-heading-container {
+    text-align: center; /* Centers the heading and text */
+  }
   
   /* Thin out the marketing headings */
   /* rtl:begin:remove */
   .featurette-heading {
-    letter-spacing: -.05rem;
+    font-size: 50px; /* Reuses your defined font size */
+    margin-bottom: 0; /* Removes extra spacing below the heading */
+  }
+
+  .text-body-secondary {
+    display: block; /* Forces the text to appear on its own line */
+    font-size: 1.25rem; /* Adjusts size for a balanced look */
+    color: #6c757d; /* Matches secondary text color */
+    margin-top: 0.5rem; /* Adds space between the heading and secondary text */
   }
   
   /* rtl:end:remove */
@@ -77,7 +121,7 @@ body {
   
   @media (min-width: 62em) {
     .featurette-heading {
-      margin-top: 7rem;
+      margin-top: 1rem;
     }
   }
   
