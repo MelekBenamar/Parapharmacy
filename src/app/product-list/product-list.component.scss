@@ -1,11 +1,26 @@
+body {
+    background-color: var(--bs-gray);
+}
+
+.mat-toolbar {
+    background-color: var(--bs-dark);
+    color: white;
+    button {
+        color: black;
+        background-color: #92F504;
+        border: #92F504;
+    }
+}
+
 .example-spacer {
     flex: 1 1 auto;
 }
 
 .main-body{
-    padding-top: 20px;
-    margin: auto;
-    max-width: 1248px;
+    background-color: white;
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 80%;
     mat-form-field{
         width: 100%;
     }
